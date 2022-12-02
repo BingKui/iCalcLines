@@ -1,0 +1,93 @@
+{
+  "build": {
+    "beforeDevCommand": "yarn dev",
+    "beforeBuildCommand": "yarn build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "代码变动统计",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true,
+      "shell": {
+        "all": false,
+        "execute": true,
+        "open": true,
+        "scope": [{
+          "name": "npm",
+          "cmd": "npm",
+          "args": true
+        }, {
+          "name": "cnpm",
+          "cmd": "cnpm",
+          "args": true
+        }, {
+          "name": "tnpm",
+          "cmd": "tnpm",
+          "args": true
+        }, {
+          "name": "pnpm",
+          "cmd": "pnpm",
+          "args": true
+        }, {
+          "name": "yarn",
+          "cmd": "yarn",
+          "args": true
+        }],
+        "sidecar": false
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/icon.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "cn.uiseed.icalclines",
+      "longDescription": "代码变动统计",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": "康兵奎",
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "title": "代码变动统计",
+        "visible": true,
+        "width": 500,
+        "decorations": true
+      }
+    ]
+  }
+}

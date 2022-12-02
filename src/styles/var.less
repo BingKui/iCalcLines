@@ -1,0 +1,197 @@
+// 颜色-主题色来自 iview
+// 颜色定义文件
+@primary: #2d8cf0;
+@info: #2db7f5;
+@success: #19be6b;
+@warn: #ff9900;
+@danger: #ed4014;
+@primary-light: #5cadff;
+// 灰度定义
+@gray: #CCCCCC;
+@gray-light: #e5e5e5;
+@gray-darker: #666;
+@gray-dark: #999999;
+
+// 其他颜色定义
+@black: #000000;
+@white: #ffffff;
+@title-color: #17233d;
+@content-color: #515a6e;
+@sub-color: #808695;
+@disable-color: #c5c8ce;
+@border-color: #dcdee2;
+@divider-color: #e8eaec;
+@background-color: #f8f8f9;
+
+@font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+
+// 字号
+@font-size-mini: 10px;
+@font-size-sm: 12px;
+@font-size: 14px;
+@font-size-md: 16px;
+@font-size-lg: 18px;
+
+// 字体粗细
+@font-weight: 400;
+@font-weight-bold: 500;
+
+// border 相关
+@border: 1px solid @border-color;
+@border-mini: 0.5px solid @border-color;
+@border-radius: 4px;
+
+// 长度、尺寸定义文件
+// 基数
+@_base_line: 5px;
+
+@gap-sm: @_base_line;
+@gap: @_base_line * 2;
+@gap-md: @_base_line * 3;
+@gap-lg: @_base_line * 4;
+
+@header-height: 50px;
+
+// 方法
+// 字体相应的方法
+.font-size(@size) {
+    font-size: @size * 1px;
+    line-height: 1.5;
+}
+
+.font-weight(@weight) {
+    font-weight: @weight;
+}
+
+.text-overflow () {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-overflow-line (@num) {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @num;
+    overflow: hidden;
+}
+
+.clearfix () {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+.border-line() {
+    position: relative;
+
+    &::after {
+        height: 1px;
+        background-color: @border-color;
+        position: absolute;
+        bottom: 0;
+        left: @gap-md;
+        right: @gap-md;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line(@color, @left, @right) {
+    position: relative;
+
+    &::after {
+        height: 1px;
+        background-color: @color;
+        position: absolute;
+        bottom: 0;
+        left: @left;
+        right: @right;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line-top() {
+    position: relative;
+
+    &::after {
+        height: 1px;
+        background-color: @border-color;
+        position: absolute;
+        top: 0;
+        left: @gap-md;
+        right: @gap-md;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line-top(@color, @left, @right) {
+    position: relative;
+
+    &::after {
+        height: 1px;
+        background-color: @color;
+        position: absolute;
+        top: 0;
+        left: @left;
+        right: @right;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+// 滚动相关
+.scroll-x() {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: block;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-y() {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+}
+
+.linear-right-top(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right top, @colorOne, @colorTwo);
+}
+
+.linear-bottom(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to bottom, @colorOne, @colorTwo);
+}
+
+.linear-right-bottom(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right bottom, @colorOne, @colorTwo);
+}
+
+.linear-right(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right, @colorOne, @colorTwo);
+}
+
+.linear-background-color(@colorOne, @colorTwo) {
+    background-image: linear-gradient(to right, @colorOne, @colorTwo);
+}
+
+@headerHeight: 50px;
+@asideWidth: 200px;
+// 业务相关变量
+@searchItemHeight: 55px;
+
+// dark mode
+@dark-mode-background: #17191A;
+@dark-mode-item-background: #2B2C2D;
+@dark-title-color: rgba(255, 255, 255, .7);
+@dark-switch-color: #909399;
